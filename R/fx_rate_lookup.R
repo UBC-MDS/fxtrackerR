@@ -1,9 +1,9 @@
 #' Return the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data.
 #'
-#' @param curr A character vector which is the ticker of the currency pair such as 'EURUSD'
-#' @param target_px A double vector that is the target price for the lookup
+#' @param curr A character vector with one element which is the ticker of the currency pair such as 'EURUSD'
+#' @param target_px A double vector with one element that is the target price for the lookup
 #'
-#' @return A datetime. The closest date on which the target price falling between day high and day low.
+#' @return A character vector with one element. The closest date on which the target price falling between day high and day low in YYYY-MM-DD.
 #' @export
 #'
 #' @examples
