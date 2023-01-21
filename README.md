@@ -6,7 +6,32 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of fxtrackerR is to …
+This is a R package created as a group project for DSCI_524
+Collaborative Software Development of UBC Master of Data Science (MDS)
+program 2022-2023. Based on the foreign exchange data in Yahoo Finance,
+this package allows user to perform currency conversion based on the
+latest available exchange rate, lookup a target exchange rate from
+historical data as well plotting exchange rate history and profit/loss
+percentage history by specifying a currency pair (and other input
+parameters).
+
+## Functions
+
+- `fx_conversion` Convert the input amount of currency 1 to currency 2
+  based on the latest available exchange rate.
+- `fx_rate_lookup` Lookup for the date of the first occurence (in
+  reverse chronological order) on which the input target rate of a
+  currency pair is within the day’s high/low.
+- `price_trend_viz` Plot the historical exchange rate of the input
+  currency pair for a specific period of time.
+- `pl_trend_viz` Plot the historical profit/loss percentage of the input
+  currency pair for a specific period of time.
+
+There is a R package
+[czechrates](https://cran.r-project.org/web/packages/czechrates/index.html)
+relevant to foreign exchange. The package only provides foreign exchange
+rates from Koruna to other currencies. It does not support global
+currency exchange rates and visualizations like `fxtrackerR` does.
 
 ## Installation
 
@@ -26,30 +51,3 @@ This is a basic example which shows you how to solve a common problem:
 library(fxtrackerR)
 ## basic example code
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
