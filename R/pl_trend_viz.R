@@ -38,6 +38,8 @@ pl_trend_viz <- function(curr, start_date, end_date, chart_type) {
   if ((chart_type %in% viz_list) == FALSE){
     stop("Chart type is invalid")
   }
+
+  #check if it is a valid ticker
   tryCatch( { data <- tidyquant::tq_get(curr_func, from = start_date, to = end_date, get = 'stock.prices') }
             , warning = function(e) {stop("You have entered an invalid foreign ticker! Try again.")})
 
