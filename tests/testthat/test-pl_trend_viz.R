@@ -23,4 +23,3 @@ chart <- pl_trend_viz("EURUSD",'2020-12-31', '2021-12-31','line')
 test_that('Plot should map Date to x-axis and map pct_change to y-axis ', {
   expect_true("date" == rlang::get_expr(chart$mapping$x))
   expect_true("pct_change" == rlang::get_expr(chart$mapping$y))
-})
