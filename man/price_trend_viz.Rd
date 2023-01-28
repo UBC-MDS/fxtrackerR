@@ -4,14 +4,16 @@
 \alias{price_trend_viz}
 \title{Visualizes trend of the exchange rate of a currency pair between the selected start date and end date.}
 \usage{
-price_trend_viz(curr, start_date, end_date)
+price_trend_viz(curr, start_date, end_date, option)
 }
 \arguments{
 \item{curr}{A character vector which is the ticker of the currency pair such as 'EURUSD'}
 
-\item{start_date}{A character vector that is the start date of the selected period of time}
+\item{start_date}{A character vector which is the start date of the selected period of time}
 
-\item{end_date}{A character vector that is the end date of the selected period of time}
+\item{end_date}{A character vector which is the end date of the selected period of time}
+
+\item{option}{A character vector which must be from 'Open', High', "Low', 'Close'}
 }
 \value{
 A line plot that shows the trend of the exchange rate of a currency pair over the selected period of time.

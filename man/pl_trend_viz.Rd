@@ -14,7 +14,7 @@ pl_trend_viz(curr, start_date, end_date)
 \item{end_date}{A character vector that is the end date of the selected period of time}
 }
 \value{
-A line plot that shows the trend of the profit and loss of a currency pair over the selected period of time
+A ggplot that shows the trend of the profit and loss of a currency pair over the selected period of time
 }
 \description{
 Visualizes trend of the profit and loss of a currency pair between the selected start date and end date.

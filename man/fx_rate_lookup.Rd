@@ -7,12 +7,12 @@
 fx_rate_lookup(curr, target_px)
 }
 \arguments{
-\item{curr}{A character vector which is the ticker of the currency pair such as 'EURUSD'}
+\item{curr}{A character vector with one element which is the ticker of the currency pair such as 'EURUSD'}
 
-\item{target_px}{A double vector that is the target price for the lookup}
+\item{target_px}{A double vector with one element that is the target price for the lookup}
 }
 \value{
-A datetime. The closest date on which the target price falling between day high and day low.
+A character vector with one element. The closest date on which the target price falling between day high and day low in YYYY-MM-DD.
 }
 \description{
 Return the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data.
