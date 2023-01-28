@@ -4,7 +4,7 @@
 \alias{pl_trend_viz}
 \title{Visualizes trend of the profit and loss of a currency pair between the selected start date and end date.}
 \usage{
-pl_trend_viz(curr, start_date, end_date)
+pl_trend_viz(curr, start_date, end_date, chart_type)
 }
 \arguments{
 \item{curr}{A character vector which is the ticker of the currency pair such as 'EURUSD'}
@@ -12,6 +12,8 @@ pl_trend_viz(curr, start_date, end_date)
 \item{start_date}{A character vector that is the start date of the selected period of time}
 
 \item{end_date}{A character vector that is the end date of the selected period of time}
+
+\item{chart_type}{A character vector that is the type of the chart}
 }
 \value{
 A ggplot that shows the trend of the profit and loss of a currency pair over the selected period of time
@@ -20,5 +22,5 @@ A ggplot that shows the trend of the profit and loss of a currency pair over the
 Visualizes trend of the profit and loss of a currency pair between the selected start date and end date.
 }
 \examples{
-pl_trend_viz('EURUSD', '2018-12-31', '2022-12-31')
+pl_trend_viz('EURUSD', '2018-12-31', '2022-12-31', 'line')
 }
