@@ -51,12 +51,12 @@ price_trend_viz <- function(curr, start_date, end_date, option) {
   options(repr.plot.height = 9, repr.plot.width = 13)
   
   trend_plot <- data |>
-    ggplot2::ggplot(aes(x = date, y = get(option))) +
+    ggplot2::ggplot(ggplot2::aes(x = date, y = get(option))) +
     ggplot2::geom_line() +
     ggplot2::ggtitle(paste0("Trend of Exchange Rate (Daily ", option, ") of ", curr, " from ", start_date, " to ", end_date)) +
     ggplot2::xlab("Date") +
     ggplot2::ylab("Exchange Rate") +
-    ggplot2::theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))
   
   return(trend_plot)
   

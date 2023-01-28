@@ -31,5 +31,5 @@ test_that("Check if the same dates are entered for start date and end date", {
 })
 
 test_that("Check if output is a ggplot object", {
-  expect_true(is.ggplot(price_trend_viz('EURUSD', '2012-02-01', '2014-12-31', 'high')))
+  expect_true(ggplot2::is.ggplot(price_trend_viz('EURUSD', '2012-02-01', '2014-12-31', 'high')))
 })
