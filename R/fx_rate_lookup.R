@@ -10,5 +10,40 @@
 #' fx_rate_lookup('EURUSD', 1.072)
 
 fx_rate_lookup <- function(curr, target_px)  {
-  TRUE
+  # check input type of curr
+  if (! is.character(curr)) {
+    stop('The first parameter must be a string!')
+  }
+
+  # check input type of target_px
+  if (!is.numeric(target_px)) {
+    stop('The second parameter must be numeric!')
+  }
+
+  curr <- paste0(curr, "=X")
+
+  tryCatch(
+    {
+    df <- tidyquant::tq_get(curr, get = 'stock.prices', from = '1900-01-01') |>
+      dplyr::filter(high >= target_px) |>
+      dplyr::filter(low <= target_px) |>
+      dplyr::arrange(dplyr::desc(date)) |>
+      dplyr::filter(dplyr::row_number() == 1) |>
+      dplyr::select(date) |>
+      dplyr::pull() |>
+      format(format = '%Y-%m-%d')
+    },
+    error=function(e) {
+      stop('No data found from data source. Check your ticker.')
+    },
+    warning=function(w) {
+      stop('No data found from data source. Check your ticker.')
+    }
+  )
+
+  if (length(df) == 0) {
+    stop('Target price not found. Adjust your target price.')
+  }
+  else
+    df
 }
