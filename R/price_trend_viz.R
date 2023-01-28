@@ -11,8 +11,6 @@
 #' @examples
 #' price_trend_viz('EURUSD', '2018-12-31', '2022-12-31', 'close')
 
-options(repr.plot.height = 9, repr.plot.width = 13)
-
 
 price_trend_viz <- function(curr, start_date, end_date, option) {
   # Check input type of curr
@@ -50,6 +48,8 @@ price_trend_viz <- function(curr, start_date, end_date, option) {
   }
   
   # Plotting 
+  options(repr.plot.height = 9, repr.plot.width = 13)
+  
   trend_plot <- data |>
     ggplot2::ggplot(aes(x = date, y = get(option))) +
     ggplot2::geom_line() +
