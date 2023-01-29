@@ -52,6 +52,7 @@ fx_conversion <- function(curr1, curr2, amt) {
 #' fx_rate_lookup('EURUSD', 1.072)
 
 fx_rate_lookup <- function(curr, target_px)  {
+  
   # check input type of curr
   if (! is.character(curr)) {
     stop('The first parameter must be a string!')
@@ -105,17 +106,17 @@ fx_rate_lookup <- function(curr, target_px)  {
 pl_trend_viz <- function(curr, start_date, end_date, chart_type) {
 
   #check curr variable is type string
-  if(class(curr) != 'character') {
+  if (!is.character(curr))  {
     stop("Currency should be string")}
 
   curr_func <- paste(curr, "=X", sep="")
 
   #check start_date variable is type string
-  if(class(start_date) != 'character') {
+  if(!is.character(start_date)) {
     stop("Start date should be string")}
 
   #check end_date variable is type string
-  if(class(end_date) != 'character') {
+  if(!is.character(end_date)) {
     stop("End date should be string")}
 
   # Assert end date is later than start date
