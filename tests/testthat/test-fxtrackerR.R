@@ -22,12 +22,12 @@ test_that("Check if output is numeric", {
 
 # check if all arguments are passed
 test_that("Check if all arguments are passed", {
-    expect_error(fx_conversion('USD', 'EUR'), 'argument "amt" is missing, with no default')
+  expect_error(fx_conversion('USD', 'EUR'), 'argument "amt" is missing, with no default')
 })
 
 # check if correct arguments are passed
 test_that("Check if correct arguments are passed", {
-    expect_error(fx_conversion('USD', 'EUR', a), "object 'a' not found")
+  expect_error(fx_conversion('USD', 'EUR', a), "object 'a' not found")
 })
 
 # check for invalid ticker
@@ -53,6 +53,14 @@ test_that("Return string should be in the format YYYY-MM-DD.", {
   expect_match(fx_rate_lookup('JPYHKD', 0.09), '^\\d{4}-\\d{2}-\\d{2}$')
 })
 
+test_that("No data found from data source. Check your ticker.", {
+  expect_error(fx_rate_lookup('', 1.034))
+})
+
+test_that("Target price not found. Adjust your target price.", {
+  expect_error(fx_rate_lookup('EURUSD', 10.034342))
+})
+
 
 # test for pl_trend_viz
 
@@ -72,7 +80,7 @@ test_that("Error of end_date format",{expect_error(pl_trend_viz('EURUSD','2022-1
 test_that("Error of end_date format",{expect_error(pl_trend_viz('EURUSD','2020-12-31', '2022-12-31','bar'))})
 
 #test invalid ticker error
-test_that("Error of end_date format",{expect_error(pl_trend_viz('ABC','2020-12-31', '2022-12-31','bar'))})
+test_that("Error of end_date format",{expect_error(pl_trend_viz('ABC','2020-12-31', '2022-12-31','area'))})
 
 #test for chart mapping
 chart <- pl_trend_viz("EURUSD",'2020-12-31', '2021-12-31','line')
@@ -80,6 +88,10 @@ test_that('Plot should map Date to x-axis and map pct_change to y-axis ', {
   expect_true("date" == rlang::get_expr(chart$mapping$x))
   expect_true("pct_change" == rlang::get_expr(chart$mapping$y))})
 
+chart <- pl_trend_viz("EURUSD",'2020-12-31', '2021-12-31','area')
+test_that('Plot should map Date to x-axis and map pct_change to y-axis ', {
+  expect_true("date" == rlang::get_expr(chart$mapping$x))
+  expect_true("pct_change" == rlang::get_expr(chart$mapping$y))})
 
 # test for price_trend_viz
 

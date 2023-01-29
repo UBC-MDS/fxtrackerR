@@ -6,15 +6,16 @@ Authors@R:
     person("Markus", "Nam", , "chnam@student.ubc.ca", role = c("aut")),
     person("Crystal", "Geng", , "shuijing23884576@gmail.com", role = c("aut")),
     person("Lennon", "Au-Yeung", , "lennon.auyeung@me.com", role = c("aut")))
-Description: This package can allow users to perform currency conversion based on the latest available exchange rate, look up a target exchange rate from historical data as well as plotting exchange rate history and profit/loss percentage history by specifiying a currency pair.
+Description: This package can allow users to perform currency conversion based on the latest available exchange rate, look up a target exchange rate from historical data as well as plotting exchange rate history and profit/loss percentage history by specifying a currency pair.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    rlang
 Config/testthat/edition: 3
 Imports: 
     dplyr,
-    ggplot2,
+    ggplot2, 
     tidyquant
