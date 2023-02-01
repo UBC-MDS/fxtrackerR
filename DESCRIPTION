@@ -14,9 +14,12 @@ RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0),
     rlang,
-    covr
+    covr,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
 Imports: 
     dplyr,
     ggplot2, 
     tidyquant
+VignetteBuilder: knitr
