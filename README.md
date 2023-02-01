@@ -48,11 +48,42 @@ You can install the development version of fxtrackerR from
 devtools::install_github("UBC-MDS/fxtrackerR")
 ```
 
-## Example
+## Usage and Example
 
-This is a basic example which shows you how to solve a common problem:
+If the package is installed successfully, users need the following nine input parameters:
+
+`curr`, `target_px`, `start_date`, `end_date`, `chart_type`, `option`, `curr1`, `curr2`, `amt`. The output of the functions will be in forms of a POSIXlt, a numeric and a plot based on the "ggplot" package.
+
+`fxtracker` can be used to convert a specific amount of money from one currency to another, find the the first date on which the target price falling between day high and day low, visualize the trend of the exchange rate of a currency pair and the trend of the profit and loss of a currency pair between the selected start date and end date.
 
 ``` r
 library(fxtrackerR)
 ## basic example code
 ```
+### To convert a specific amount of money from current currency (curr1) to desired currency (curr2):
+
+    fx_conversion('EUR', 'USD', 150.75)
+
+163.68
+
+### To look up the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data:
+
+    fx_rate_lookup('EURUSD', 1.072)
+
+'2023-01-10'
+
+### To visualize the trend of the exchange rate of a currency pair between the selected start date and end date:
+
+    price_trend_viz('EURUSD', '2018-12-01', '2022-12-01', 'high')
+    
+    
+### To visualize the trend of the profit and loss of a currency pair between the selected start date and end date:
+
+**If a line chart is specified in the input:**
+
+    pl_trend_viz("EURUSD", "2020-01-01", "2022-01-01", 'line')  
+    
+
+**If an area chart is specified in the input:**
+
+    pl_trend_viz("EURUSD", "2020-01-01", "2022-01-01", 'area')
