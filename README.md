@@ -1,9 +1,11 @@
 
+[![codecov](https://codecov.io/gh/UBC-MDS/fxtrackerR/branch/main/graph/badge.svg?token=6FEOBcM32c)](https://codecov.io/gh/UBC-MDS/fxtrackerR)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # fxtrackerR
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 This is a R package created as a group project for DSCI_524
