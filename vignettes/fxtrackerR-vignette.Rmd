@@ -34,7 +34,7 @@ There is a R package [czechrates](https://cran.r-project.org/web/packages/czechr
 You can install the development version of fxtrackerR from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("UBC-MDS/fxtrackerR")
 ```
 
@@ -77,10 +77,6 @@ library(fxtrackerR)
     pl_trend_viz("EURUSD", "2020-01-01", "2022-01-01", 'area')
 
 ![](../man/figures/pl_trend_viz_area.png)
-
-## Documentation
-
-A more detailed information about our package can found seen on vignette [here]()
 
 ## Contributors
 

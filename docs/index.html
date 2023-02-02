@@ -71,6 +71,7 @@
 <div class="page-header"><h1 id="fxtrackerr">fxtrackerR<a class="anchor" aria-label="anchor" href="#fxtrackerr"></a>
 </h1></div>
 <!-- badges: start -->
+
 <!-- badges: end -->
 <p>This is a R package created as a group project for DSCI_524 Collaborative Software Development of UBC Master of Data Science (MDS) program 2022-2023. Based on the foreign exchange data in Yahoo Finance, this package allows user to perform currency conversion based on the latest available exchange rate, lookup a target exchange rate from historical data as well plotting exchange rate history and profit/loss percentage history by specifying a currency pair (and other input parameters).</p>
 <div class="section level2">
@@ -97,19 +98,17 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"UBC-MDS/fxtrackerR"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="usage-and-example">Usage and Example<a class="anchor" aria-label="anchor" href="#usage-and-example"></a>
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>If the package is installed successfully, users need the following nine input parameters:</p>
-<p><code>curr</code>, <code>target_px</code>, <code>start_date</code>, <code>end_date</code>, <code>chart_type</code>, <code>option</code>, <code>curr1</code>, <code>curr2</code>, <code>amt</code>. The output of the functions will be in forms of a POSIXlt, a numeric and a plot based on the “ggplot2” package.</p>
-<p><code>fxtracker</code> can be used to convert a specific amount of money from one currency to another, find the the first date on which the target price falling between day high and day low, visualize the trend of the exchange rate of a currency pair and the trend of the profit and loss of a currency pair between the selected start date and end date.</p>
+<p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">fxtrackerR</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="to-convert-a-specific-amount-of-money-from-current-currency-curr1-to-desired-currency-curr2">To convert a specific amount of money from current currency (curr1) to desired currency (curr2):<a class="anchor" aria-label="anchor" href="#to-convert-a-specific-amount-of-money-from-current-currency-curr1-to-desired-currency-curr2"></a>
-</h2>
+<div class="section level3">
+<h3 id="to-convert-a-specific-amount-of-money-from-current-currency-curr1-to-desired-currency-curr2">To convert a specific amount of money from current currency (curr1) to desired currency (curr2):<a class="anchor" aria-label="anchor" href="#to-convert-a-specific-amount-of-money-from-current-currency-curr1-to-desired-currency-curr2"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fx_conversion</span>(<span class="st">'EUR'</span>, <span class="st">'USD'</span>, <span class="fl">150.75</span>)</span></code></pre></div>
 <p>163.68</p>
+</div>
 <div class="section level3">
 <h3 id="to-look-up-the-first-date-reverse-chronological-order-on-which-the-target-price-falling-between-day-high-and-day-low-based-on-the-availability-of-data">To look up the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data:<a class="anchor" aria-label="anchor" href="#to-look-up-the-first-date-reverse-chronological-order-on-which-the-target-price-falling-between-day-high-and-day-low-based-on-the-availability-of-data"></a>
 </h3>
@@ -136,7 +135,7 @@
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h2>
-<p>A more detailed information about our package can found seen on vignette <a href="">here</a></p>
+<p>A more detailed information about our package can found seen on vignette <a href="https://ubc-mds.github.io/fxtrackerR/" class="external-link">here</a></p>
 </div>
 <div class="section level2">
 <h2 id="contributors">Contributors<a class="anchor" aria-label="anchor" href="#contributors"></a>
@@ -201,7 +200,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
   </div>
 </div>
