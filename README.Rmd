@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/UBC-MDS/fxtrackerR/branch/main/graph/badge.svg?token=6FEOBcM32c){alt="codecov"}](https://codecov.io/gh/UBC-MDS/fxtrackerR) [![test-coverage](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml/badge.svg){alt="test-coverage"}](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml) [![R-CMD-check](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg){alt="R-CMD-check"}](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml) [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg){alt="License:MIT"}](https://opensource.org/licenses/MIT)
 
 <!-- badges: end -->
 
