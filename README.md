@@ -1,4 +1,7 @@
-
+[![codecov](https://codecov.io/gh/UBC-MDS/fxtrackerR/branch/main/graph/badge.svg?token=6FEOBcM32c)](https://codecov.io/gh/UBC-MDS/fxtrackerR)
+[![test-coverage](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml)
+[![R-CMD-check](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml)
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # fxtrackerR
