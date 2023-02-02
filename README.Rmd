@@ -83,7 +83,7 @@ library(fxtrackerR)
 
 ## Documentation
 
-A more detailed information about our package can found seen on vignette [here]()
+A more detailed information about our package can found seen on vignette [here](https://ubc-mds.github.io/fxtrackerR/)
 
 ## Contributors
 

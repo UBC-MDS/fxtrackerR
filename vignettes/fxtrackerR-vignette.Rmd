@@ -78,10 +78,6 @@ library(fxtrackerR)
 
 ![](../man/figures/pl_trend_viz_area.png)
 
-## Documentation
-
-A more detailed information about our package can found seen on vignette [here]()
-
 ## Contributors
 
 -   Sarah Abdelazim
