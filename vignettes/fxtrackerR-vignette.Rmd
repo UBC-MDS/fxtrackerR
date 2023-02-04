@@ -95,4 +95,4 @@ library(fxtrackerR)
 
 ## License
 
-`fxtracker` was created by Sarah Abdelazim, Markus Nam, Crystal Geng and Lennon Au-Yeung. It is licensed under the terms of the MIT license. <!-- #endregion -->
+`fxtrackerR` was created by Sarah Abdelazim, Markus Nam, Crystal Geng and Lennon Au-Yeung. It is licensed under the terms of the MIT license. <!-- #endregion -->
