@@ -1,27 +1,54 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # fxtrackerR
 
 <!-- badges: start -->
 
-[<img src="https://codecov.io/gh/UBC-MDS/fxtrackerR/branch/main/graph/badge.svg?token=6FEOBcM32c" alt="codecov"/>](https://codecov.io/gh/UBC-MDS/fxtrackerR) [<img src="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml/badge.svg" alt="test-coverage"/>](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml) [<img src="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"/>](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml) [<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License:MIT"/>](https://opensource.org/licenses/MIT)
+[<img
+src="https://codecov.io/gh/UBC-MDS/fxtrackerR/branch/main/graph/badge.svg?token=6FEOBcM32c"
+alt="codecov" />](https://codecov.io/gh/UBC-MDS/fxtrackerR) [<img
+src="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml/badge.svg"
+alt="test-coverage" />](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/test-coverage.yaml)
+[<img
+src="https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml/badge.svg"
+alt="R-CMD-check" />](https://github.com/UBC-MDS/fxtrackerR/actions/workflows/R-CMD-check.yaml)
+[<img src="https://img.shields.io/badge/License-MIT-yellow.svg"
+alt="License:MIT" />](https://opensource.org/licenses/MIT)
 
 <!-- badges: end -->
 
-This is a R package created as a group project for DSCI_524 Collaborative Software Development of UBC Master of Data Science (MDS) program 2022-2023. Based on the foreign exchange data in Yahoo Finance, this package allows user to perform currency conversion based on the latest available exchange rate, lookup a target exchange rate from historical data as well plotting exchange rate history and profit/loss percentage history by specifying a currency pair (and other input parameters).
+This is a R package created as a group project for DSCI_524
+Collaborative Software Development of UBC Master of Data Science (MDS)
+program 2022-2023. Based on the foreign exchange data in Yahoo Finance,
+this package allows user to perform currency conversion based on the
+latest available exchange rate, lookup a target exchange rate from
+historical data as well plotting exchange rate history and profit/loss
+percentage history by specifying a currency pair (and other input
+parameters).
 
 ## Functions Description
 
--   `fx_conversion` Convert the input amount of currency 1 to currency 2 based on the latest available exchange rate.
--   `fx_rate_lookup` Lookup for the date of the first occurence (in reverse chronological order) on which the input target rate of a currency pair is within the day's high/low.
--   `price_trend_viz` Plot the historical exchange rate of the input currency pair for a specific period of time.
--   `pl_trend_viz` Plot the historical profit/loss percentage of the input currency pair for a specific period of time.
+- `fx_conversion` Convert the input amount of currency 1 to currency 2
+  based on the latest available exchange rate.
+- `fx_rate_lookup` Lookup for the date of the first occurence (in
+  reverse chronological order) on which the input target rate of a
+  currency pair is within the day’s high/low.
+- `price_trend_viz` Plot the historical exchange rate of the input
+  currency pair for a specific period of time.
+- `pl_trend_viz` Plot the historical profit/loss percentage of the input
+  currency pair for a specific period of time.
 
-There is a R package [czechrates](https://cran.r-project.org/web/packages/czechrates/index.html) relevant to foreign exchange. The package only provides foreign exchange rates from Koruna to other currencies. It does not support global currency exchange rates and visualizations like `fxtrackerR` does.
+There is a R package
+[czechrates](https://cran.r-project.org/web/packages/czechrates/index.html)
+relevant to foreign exchange. The package only provides foreign exchange
+rates from Koruna to other currencies. It does not support global
+currency exchange rates and visualizations like `fxtrackerR` does.
 
 ## Installation
 
-You can install the development version of fxtrackerR from [GitHub](https://github.com/) with:
+You can install the development version of fxtrackerR from
+[GitHub](https://github.com/) with:
 
 ``` r
 install.packages("devtools")
@@ -46,7 +73,7 @@ library(fxtrackerR)
 
     fx_rate_lookup('EURUSD', 1.072)
 
-'2023-01-10'
+‘2023-01-10’
 
 ### To visualize the trend of the exchange rate of a currency pair between the selected start date and end date:
 
@@ -70,23 +97,26 @@ library(fxtrackerR)
 
 ## Documentation
 
-A more detailed information about our package can found seen on vignette [here](https://ubc-mds.github.io/fxtrackerR/)
+A more detailed information about our package can found seen on vignette
+[here](https://ubc-mds.github.io/fxtrackerR/)
 
 ## Contributors
 
--   Sarah Abdelazim
--   Markus Nam
--   Crystal Geng
--   Lennon Au-Yeung
+- Sarah Abdelazim
+- Markus Nam
+- Crystal Geng
+- Lennon Au-Yeung
 
 ## Dependencies
 
--   dplyr == 1.1.0
--   ggplot2 == 3.4.0
--   tidyquant == 1.0.6
--   rlang == 1.0.6
--   testthat (\>= 3.0.0)
+- dplyr == 1.1.0
+- ggplot2 == 3.4.0
+- tidyquant == 1.0.6
+- rlang == 1.0.6
+- testthat (\>= 3.0.0)
 
 ## License
 
-`fxtracker` was created by Sarah Abdelazim, Markus Nam, Crystal Geng and Lennon Au-Yeung. It is licensed under the terms of the MIT license. <!-- #endregion -->
+`fxtrackerR` was created by Sarah Abdelazim, Markus Nam, Crystal Geng
+and Lennon Au-Yeung. It is licensed under the terms of the MIT license.
+<!-- #endregion -->
