@@ -40,7 +40,7 @@ fx_conversion <- function(curr1, curr2, amt) {
     return(new_amount)
 }
 
-#' Return the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data.
+#' Return the most recent date on which the target price happened. i.e. the target price was between day high and day low of the day.
 #'
 #' @param curr A character vector with one element which is the ticker of the currency pair such as 'EURUSD'
 #' @param target_px A double vector with one element that is the target price for the lookup
