@@ -26,7 +26,7 @@ This is a R package created as a group project for DSCI_524 Collaborative Softwa
 ## Functions Description
 
 -   `fx_conversion` Convert the input amount of currency 1 to currency 2 based on the latest available exchange rate.
--   `fx_rate_lookup` Lookup for the date of the first occurence (in reverse chronological order) on which the input target rate of a currency pair is within the day's high/low.
+-   `fx_rate_lookup` Lookup for the most recent date on which the input target price happened. i.e. the target price was within the day's high/low of the day.
 -   `price_trend_viz` Plot the historical exchange rate of the input currency pair for a specific period of time.
 -   `pl_trend_viz` Plot the historical profit/loss percentage of the input currency pair for a specific period of time.
 
@@ -55,7 +55,7 @@ library(fxtrackerR)
 
 163.68
 
-### To look up the first date (reverse chronological order) on which the target price falling between day high and day low based on the availability of data:
+### To look up the most recent date on which the target price happened. i.e. the target price was between day high and day low of the day:
 
     fx_rate_lookup('EURUSD', 1.072)
 
@@ -102,4 +102,4 @@ A more detailed information about our package can found seen on vignette [here](
 
 ## License
 
-`fxtrackerR` was created by Sarah Abdelazim, Markus Nam, Crystal Geng and Lennon Au-Yeung. It is licensed under the terms of the MIT license. <!-- #endregion -->
+`fxtrackerR` was created by Sarah Abdelazim, Lennon Au-Yeung, Crystal Geng and Markus Nam. It is licensed under the terms of the MIT license. <!-- #endregion -->
