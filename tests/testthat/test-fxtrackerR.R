@@ -37,10 +37,12 @@ test_that("Check for invalid ticker", {
 
 # test for fx_rate_lookup
 
+# Curr type invalid
 test_that("The first parameter (curr) should be a string.", {
   expect_error(fx_rate_lookup(123, 0.09))
 })
 
+# Target price type invalid
 test_that("The second parameter (target_px) should be numeric.", {
   expect_error(fx_rate_lookup('JPYHKD', '0.09'))
 })
@@ -49,14 +51,17 @@ test_that("The first parameter (curr) should be a valid ticker.", {
   expect_error(fx_rate_lookup('ABC', 0.09))
 })
 
+# Return string format check
 test_that("Return string should be in the format YYYY-MM-DD.", {
   expect_match(fx_rate_lookup('JPYHKD', 0.09), '^\\d{4}-\\d{2}-\\d{2}$')
 })
 
+# Curr not found
 test_that("No data found from data source. Check your ticker.", {
   expect_error(fx_rate_lookup('', 1.034))
 })
 
+# Target price not found
 test_that("Target price not found. Adjust your target price.", {
   expect_error(fx_rate_lookup('EURUSD', 10.034342))
 })
